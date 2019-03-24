@@ -1,15 +1,20 @@
-import React, {Component, Fragment} from 'react';
-import {Navbar} from './../../components/NavBar';
-import {LeftSideBar} from './../../components/LeftSideBar';
+import React, { Component, Fragment } from 'react';
+import { connect } from 'react-redux';
+import { Navbar } from './../../components/NavBar';
+import { LeftSideBar } from './../../components/LeftSideBar';
+// import { retractSlider } from './../../redux/actionCreator/homePageActions';
 
 export class Homepage extends Component{
+    componentDidMount(){
+        console.log('+'.repeat(10), this.props);
+    }
 
     renderNavBar(){
-        return ( <Navbar /> );
+        return (<Navbar actionDispatch={this.props.dispatch} /> );
     }
 
     renderLeftSideBar(){
-        return ( <LeftSideBar /> )
+        return <LeftSideBar />
     }
 
 render(){
@@ -23,3 +28,17 @@ render(){
     )
 }
 }
+
+// const mapDispatchToProps = {
+//     retractSlider
+// }
+
+const mapStateToProps = (state) => ({
+    slider: state[0]
+})
+
+
+export default connect(
+    mapStateToProps,
+    null
+)(Homepage)

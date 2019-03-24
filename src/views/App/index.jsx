@@ -1,16 +1,20 @@
 import React, {Component} from 'react';
-import { Homepage } from './../homepage';
+import { Provider } from 'react-redux'
+import ConnectedHomepage  from './../homepage';
+import store from './../../redux/store/store'
 
 import './../../../node_modules/material-design-lite/material';
-import 'antd/dist/antd.css'; 
+import './App.scss'; 
 
 export class App extends Component{
 
 render(){
     return(
+<Provider store={store}>
     <div>
-        <Homepage />
+        <ConnectedHomepage />
     </div>
+    </Provider>
     )
 }
 }

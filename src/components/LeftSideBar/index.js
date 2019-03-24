@@ -25,10 +25,11 @@ if (this.rootSubmenuKeys.indexOf(latestOpenKey) === -1) {
 render() {
 return (
     <Menu
+    className=""
     mode="inline"
     openKeys={this.state.openKeys}
     onOpenChange={this.onOpenChange}
-    style={{ width: 256 }}
+    style={{ width: 256, height: 850}}
     >
     <SubMenu key="sub1" title={<span><Icon type="mail" /><span>Prices</span></span>}>
         <Menu.Item key="1">Option 1</Menu.Item>
