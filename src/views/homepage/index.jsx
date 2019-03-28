@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import { connect } from 'react-redux';
 import { Navbar } from './../../components/NavBar';
-import { LeftSideBar } from './../../components/LeftSideBar';
+import { ContentArea } from './../../components/contentArea';
 // import { retractSlider } from './../../redux/actionCreator/homePageActions';
 
 export class Homepage extends Component{
@@ -14,7 +14,7 @@ export class Homepage extends Component{
     }
 
     renderLeftSideBar(){
-        return <LeftSideBar />
+        return <ContentArea />
     }
 
 render(){

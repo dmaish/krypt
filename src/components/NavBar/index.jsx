@@ -1,32 +1,23 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
 import React, {Component} from 'react';
-import { Menu, Icon } from 'antd';
 import { retractSlider } from './../../redux/actionCreator/homePageActions';
+import './Navbar.scss';
 
 export class Navbar extends Component {
-state = {
-    current: 'mail',
-    }
 
-    handleClick = (e) => {
-        const dispatch = this.props.actionDispatch;
-        dispatch(retractSlider());
-        this.setState({
-            current: e.key,
-        });
-    }
+    // renderAppTitle (){
+    //     return (
+            
+    //     )
+    // }
 
     render() {
     return (
-        <Menu
-        onClick={this.handleClick}
-        selectedKeys={[this.state.current]}
-        mode="horizontal"
-        >
-        <Menu.Item key="mail">
-            <Icon type="menu" /> krypt
-        </Menu.Item>
-        </Menu>
+    <div className="main-nav">
+        <i class="fas fa-bars"></i>
+        <div className="app-title">
+                <span>crypt_`</span>
+            </div>
+    </div>
     );
     }
 }
