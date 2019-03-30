@@ -2,11 +2,13 @@ import React, { Component, Fragment } from 'react';
 import { connect } from 'react-redux';
 import { Navbar } from './../../components/NavBar';
 import { ContentArea } from './../../components/contentArea';
+import allCurrenciesService from './../../services/allCurrenciesService';
 // import { retractSlider } from './../../redux/actionCreator/homePageActions';
 
 export class Homepage extends Component{
     componentDidMount(){
-        console.log('+'.repeat(10), this.props);
+        const currencyData = allCurrenciesService.getAllcurrencies();
+        console.log('+'.repeat(10), currencyData);
     }
 
     renderNavBar(){
