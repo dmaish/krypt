@@ -1,22 +1,24 @@
 import React, { Component, Fragment } from 'react';
 import { connect } from 'react-redux';
 import { Navbar } from './../../components/NavBar';
-import { ContentArea } from './../../components/contentArea';
-import allCurrenciesService from './../../services/allCurrenciesService';
-// import { retractSlider } from './../../redux/actionCreator/homePageActions';
+import { SideBarContentAreaContainer } from './../../components/contentArea';
+import { 
+    retractSlider,
+    fetchAllCurrenciesAction,
+        } from './../../redux/actionCreator/homePageActions';
 
 export class Homepage extends Component{
     componentDidMount(){
-        const currencyData = allCurrenciesService.getAllcurrencies();
-        console.log('+'.repeat(10), currencyData);
+        const {  fetchAllCurrenciesAction } = this.props;
+        fetchAllCurrenciesAction();
     }
 
     renderNavBar(){
-        return (<Navbar actionDispatch={this.props.dispatch} /> );
+        return (<Navbar actionDispatch={this.props.retractSlider} /> ); 
     }
 
     renderLeftSideBar(){
-        return <ContentArea />
+        return <SideBarContentAreaContainer />
     }
 
 render(){
@@ -31,16 +33,17 @@ render(){
 }
 }
 
-// const mapDispatchToProps = {
-//     retractSlider
-// }
+const mapDispatch = {
+    retractSlider,
+    fetchAllCurrenciesAction,
+}
 
 const mapStateToProps = (state) => ({
     slider: state[0]
-})
 
+})
 
 export default connect(
     mapStateToProps,
-    null
+    mapDispatch,
 )(Homepage)

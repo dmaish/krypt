@@ -4,11 +4,6 @@ import './Navbar.scss';
 
 export class Navbar extends Component {
 
-    // renderAppTitle (){
-    //     return (
-            
-    //     )
-    // }
 
     render() {
     return (

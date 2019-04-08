@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import { LeftSideBar } from './../LeftSideBar';
 import './ContentArea.scss';
 
-export class ContentArea extends Component {
+export class SideBarContentAreaContainer extends Component {
 
 render(){
     return(
