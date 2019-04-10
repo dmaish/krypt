@@ -1,9 +1,83 @@
+.card:hover {
+    box-shadow: 0 7px 10px rgba(0,0,0,0.25);
+}
 .card {
     position: relative;
-    top: 50%;
-    left: 50%;
-    width: 60px;
-    height: 85px;
-    background-color: aqua;
-    transform: translate(50%, 50%);
+    width: 256px;
+    height: 320px;
+    background-color: #ffffff;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16);
+
+    .card-title {
+        position: relative;
+        top: 20px;
+        left: 20px;
+
+        .crypto-title {
+            font-size: 19px;
+            font-style: bold;
+        }
+    }
+    .card-price {
+        position: relative;
+        top: 40px;
+        left: 20px;
+
+        .actual-price, .price-title {
+            display: block;
+        }
+    }
+    .market-cap {
+        position: relative;
+        top: 60px;
+        left: 20px;
+
+        .market-cap-title, .actual-market-cap {
+            display: block;
+        }
+    }
+    .volume {
+        position: relative;
+        top: -29px;
+        left: 130px;
+
+        .market-volume-title, .actual-volume {
+            display: block;
+        }
+    }
+    .circulating {
+        position: relative;
+        top: -10px;
+        left: 130px;
+
+        .circulating-title, .actual-circulating {
+            display: block;
+        }
+    }
+
+    .drop-rise {
+        position: relative;
+        top: 18px;
+        left: 20px;
+
+        .hr-drop-rise-title, .hrs-drop-rise-title {
+            display: block;
+            margin-top: 7px;
+        }
+
+    }
+
+    .title {
+        font-size: 13px;
+    } 
+
+    .card-graph {
+        position: relative;
+        display: inline-block;
+        top: -53px;
+        left: 90px;
+        width: 150px;
+        height: 70px;
+        background: #03A9F4;
+    }
 }
