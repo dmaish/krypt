@@ -3,7 +3,7 @@
 }
 .card {
     position: relative;
-    width: 256px;
+    width: 280px;
     height: 320px;
     background-color: #ffffff;
     box-shadow: 0 3px 6px rgba(0,0,0,0.16);
@@ -21,10 +21,15 @@
     .card-price {
         position: relative;
         top: 40px;
-        left: 20px;
+        left: 10px;
+        border-left: 5px solid #03A9F4;
+        padding-left: 10px;
 
         .actual-price, .price-title {
             display: block;
+        }
+        .actual-price {
+            font-weight: 700;
         }
     }
     .market-cap {
@@ -66,9 +71,23 @@
         }
 
     }
+    .actual-circulating, 
+    .actual-market-cap,
+    .actual-price,
+    .actual-volume {
+        font-family: 'Montserrat', sans-serif;
+        color: #455A64;
+
+    }
+    .actual-price{
+        color: #9C27B0;
+        
+    }
 
     .title {
         font-size: 13px;
+        color: #3F51B5;
+        margin-bottom: 1px;
     } 
 
     .card-graph {
@@ -76,7 +95,7 @@
         display: inline-block;
         top: -53px;
         left: 90px;
-        width: 150px;
+        width: 170px;
         height: 70px;
         background: #03A9F4;
     }

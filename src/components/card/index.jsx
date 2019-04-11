@@ -31,7 +31,7 @@ export default class MainSection extends Component {
     renderVolume = () => (
         <div className='volume'>
         <span className='market-volume-title title'>Volume (24hrs)</span>
-        <span className='actual-volume'>$ 7,712,254,026	</span>
+        <span className='actual-volume'>$ 10,712,254,026	</span>
         </div>
     );
 
@@ -78,7 +78,7 @@ render(){
     {this.renderCirculating()}
     {this.renderDropRise()}
     {this.renderGraph()}
-    <Button />
+    <Button proppy='hey'/>
     </div>
     );
 

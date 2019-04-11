@@ -10,7 +10,7 @@ export class Navbar extends Component {
     <div className="main-nav">
         <i class="fas fa-bars"></i>
         <div className="app-title">
-                <span>crypt_`</span>
+                <span>crypto_`</span>
             </div>
     </div>
     );
