@@ -4,6 +4,11 @@ import Button from './../button';
 import './Card.scss';
 
 export default class MainSection extends Component {
+
+    componentDidMount(){
+        console.log('+'.repeat(20), 'card is rendered');
+    }
+
     renderTitle = () => (
         <div className='card-title'>
         <span className='crypto-logo'>B

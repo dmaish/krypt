@@ -40,7 +40,6 @@ const mapDispatch = {
 
 const mapStateToProps = (state) => ({
     slider: state[0]
-
 })
 
 export default connect(
