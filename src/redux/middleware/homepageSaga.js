@@ -24,7 +24,6 @@ export function* fetchAllCurrenciesSaga(){
     try{
         const service = homePageService.getAllcurrencies;
         const allCurrencies = yield call(service);
-        console.log('THE CURRENCY', allCurrencies);
         yield put(fetchAllCurrenciesSuccessAction(allCurrencies)); 
     } catch {
         console.log('THE CURRENCY FETCHING FAILED');

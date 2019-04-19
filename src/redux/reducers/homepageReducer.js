@@ -5,7 +5,7 @@ import {
         } from './../constants/actionTypes';
 
 const initialState = {
-            shouldOpen: false,
+            isFetchingFromApi: true,
             allCurrencies: [],
 }
 
@@ -18,8 +18,7 @@ const homePage = ( state = initialState, action ) => {
             return { ...state, shouldOpen: false }
 
         case FETCH_ALL_CURRENCIES_SUCCESS:
-        console.log('action'.repeat(10), action.allCurrencies.data);
-            return{ ...state, allCurrencies: [action.allCurrencies.data] }
+            return{ ...state, allCurrencies: [action.allCurrencies.data], isFetchingFromApi: false }
 
         default:
             return state;

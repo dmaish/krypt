@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import { connect } from 'react-redux';
 import { Navbar } from './../../components/NavBar';
-import { SideBarContentAreaContainer } from './../../components/contentArea';
+import { SideBarAndContentAreaContainer } from './../../components/contentArea';
 import { 
     retractSlider,
     fetchAllCurrenciesAction,
@@ -11,14 +11,18 @@ export class Homepage extends Component{
     componentDidMount(){
         const {  fetchAllCurrenciesAction } = this.props;
         fetchAllCurrenciesAction();
+
+        console.log('homepage props', this.props);
     }
 
     renderNavBar(){
-        return (<Navbar actionDispatch={this.props.retractSlider} /> ); 
+        return (
+        <Navbar actionDispatch={this.props.retractSlider} /> 
+        ); 
     }
 
     renderLeftSideBar(){
-        return <SideBarContentAreaContainer />
+        return <SideBarAndContentAreaContainer />
     }
 
 render(){
@@ -33,16 +37,16 @@ render(){
 }
 }
 
-const mapDispatch = {
+const mapDispatchToProps = {
     retractSlider,
     fetchAllCurrenciesAction,
 }
 
 const mapStateToProps = (state) => ({
-    slider: state[0]
+    allState: state
 })
 
 export default connect(
     mapStateToProps,
-    mapDispatch,
+    mapDispatchToProps,
 )(Homepage)

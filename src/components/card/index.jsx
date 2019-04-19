@@ -6,7 +6,7 @@ import './Card.scss';
 export default class MainSection extends Component {
 
     componentDidMount(){
-        console.log('+'.repeat(20), 'card is rendered');
+        
     }
 
     renderTitle = () => (
