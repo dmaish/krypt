@@ -42,11 +42,31 @@ export class CardsContainer extends Component {
         const { isFetchingFromApi, allCurrencies } = this.state;
         if (!isFetchingFromApi){
             const displayCurrency = allCurrencies[0].DISPLAY;
-            console.log('monero', displayCurrency.ADA);
+            console.log('monero', displayCurrency);
             return Object.keys(displayCurrency).map( (item) => {
+                console.log('that item', item);
+                const {USD: { 
+                    PRICE, 
+                    TOTALVOLUME24HTO, 
+                    MKTCAP, 
+                    SUPPLY,
+                    CHANGE24HOUR,
+                    CHANGEPCT24HOUR,
+                    IMAGEURL
+                }}  = displayCurrency[item];
+                console.log('that itemq', PRICE);
                 return (
                     <div key={item}>
-                        <Card />
+                        <Card 
+                        title={item}
+                        price={PRICE}
+                        volume24hrs={TOTALVOLUME24HTO}
+                        marketcap={MKTCAP}
+                        supply={SUPPLY}
+                        change24hrs={CHANGE24HOUR}
+                        changepercent24hrs={CHANGEPCT24HOUR}
+                        imageUrl={IMAGEURL}
+                        />
                     </div>
             );
             });
