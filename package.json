@@ -4,7 +4,6 @@
   "private": true,
   "dependencies": {
     "@material-ui/core": "^3.9.2",
-    "axios": "^0.18.0",
     "customize-cra": "^0.2.12",
     "less": "^2.7.2",
     "less-loader": "^4.1.0",
@@ -12,9 +11,7 @@
     "node-sass": "^4.11.0",
     "react": "^16.8.4",
     "react-dom": "^16.8.4",
-    "react-inspector": "^3.0.2",
     "react-redux": "^6.0.1",
-    "react-router-dom": "^5.0.0",
     "react-scripts": "2.1.8",
     "redux-saga": "^1.0.2"
   },
