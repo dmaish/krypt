@@ -1,14 +1,13 @@
 import React, {Component} from 'react'; 
 import { LeftSideBar } from './../LeftSideBar';
-import MainSection from './../mainSection';
-import './SideBarContentAreaContainer.scss';
+import './ContentArea.scss';
 
-export class SideBarAndContentAreaContainer extends Component {
+export class ContentArea extends Component {
+
 render(){
     return(
-    <div className="SideBarContentAreaContainer">
-        <LeftSideBar />
-        <MainSection />
+    <div className="main-content-area">
+        <LeftSideBar />;
     </div>
     )
 }

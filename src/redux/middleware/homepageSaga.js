@@ -1,14 +1,7 @@
 /* eslint-disable require-yield */
-import { takeLatest, call, put } from 'redux-saga/effects';
-import { 
-    RETRACT_SLIDER_MENU, 
-    FETCH_ALL_CURRENCIES
-    } from './../constants/actionTypes';
-import homePageService from './../../services/homePageService';
-import { 
-    retractSlider,
-    fetchAllCurrenciesSuccessAction,
-    } from './../actionCreator/homePageActions';
+import { put, takeLatest } from 'redux-saga/effects';
+import { RETRACT_SLIDER_MENU } from './../constants/actionTypes';
+import { retractSlider } from './../actionCreator/homePageActions';
 
 export function* openSideNavSagaWatcher(){
     takeLatest(RETRACT_SLIDER_MENU, openSideNavSaga);
@@ -17,15 +10,9 @@ export function* openSideNavSaga(){
     yield put(RETRACT_SLIDER_MENU, retractSlider());
 }
 
-export function* fetchAllCurrenciesSagaWatcher(){
-    yield takeLatest(FETCH_ALL_CURRENCIES, fetchAllCurrenciesSaga)
+export function* closeSideNavSagaWatcher(){
+
 }
-export function* fetchAllCurrenciesSaga(){
-    try{
-        const service = homePageService.getAllcurrencies;
-        const allCurrencies = yield call(service);
-        yield put(fetchAllCurrenciesSuccessAction(allCurrencies)); 
-    } catch {
-        console.log('THE CURRENCY FETCHING FAILED');
-    }
+export function* closeSideNavSaga(){
+
 }

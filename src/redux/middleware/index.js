@@ -1,13 +1,10 @@
 import { all } from 'redux-saga/effects';
-import {
-    openSideNavSagaWatcher,
-    fetchAllCurrenciesSagaWatcher,
-    } from './homePageSaga';
+import { openSideNavSaga, openSideNavSagaWatcher } from './homepageSaga';
 
 function* rootSaga(){
     yield all([
-        openSideNavSagaWatcher(),
-        fetchAllCurrenciesSagaWatcher(),
+        openSideNavSaga,
+        openSideNavSagaWatcher,
     ]);
 }
 
