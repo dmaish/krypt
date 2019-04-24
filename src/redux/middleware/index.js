@@ -2,7 +2,7 @@ import { all } from 'redux-saga/effects';
 import {
     openSideNavSagaWatcher,
     fetchAllCurrenciesSagaWatcher,
-    } from './homePageSaga';
+    } from './homepageSaga';
 
 function* rootSaga(){
     yield all([
