@@ -6,6 +6,7 @@
     "@material-ui/core": "^3.9.2",
     "axios": "^0.18.0",
     "customize-cra": "^0.2.12",
+    "gh-pages": "^2.0.1",
     "less": "^2.7.2",
     "less-loader": "^4.1.0",
     "material-design-lite": "^1.3.0",
@@ -39,5 +40,6 @@
     "react-app-rewire-less-modules": "^1.3.0",
     "react-app-rewired": "^2.1.1",
     "redux-devtools-extension": "^2.13.8"
-  }
+  },
+  "homepage": "https://dmaish.github.io/krypt"
 }
