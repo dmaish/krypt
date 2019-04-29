@@ -1,6 +1,7 @@
 /* eslint-disable no-unused-expressions */
 import React, { Component } from 'react';
 import Button from './../button';
+import GraphModal from './../../components/graphModal';
 import './Card.scss';
 
 export default class MainSection extends Component {
@@ -59,23 +60,22 @@ export default class MainSection extends Component {
     <span className='hr-drop-rise-title title'>
         change (24hrs)
     </span>
-    <span>
+    <span className='actual-drop-rise'>
         {change24hrs}
     </span>
-    </div>
-    <div className='24hr-drop-rise'>
-    <span className='hrs-drop-rise-title title'>
-        %
-    </span>
-    <span>
-        {changepercent24hrs}%
+    <span className='changepercent'>
+        ({changepercent24hrs}%)
     </span>
     </div>
     </div>
     );
 
+
     renderGraph = () => (
         <div className='card-graph'>
+        <div className='graph-modal-container'>
+        <GraphModal />
+        </div>
         </div>
     );
 
@@ -87,8 +87,8 @@ render(){
     {this.renderPrice(price)}
     {this.renderMarketCap(marketcap)}
     {this.renderVolume(volume24hrs)}
-    {this.renderCirculating(supply)}
     {this.renderDropRise(change24hrs, changepercent24hrs)}
+    {this.renderCirculating(supply)}
     {this.renderGraph()}
     <Button proppy='hey'/>
     </div>

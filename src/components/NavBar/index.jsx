@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+ import React, {Component} from 'react';
 // import { retractSlider } from './../../redux/actionCreator/homePageActions';
 import './Navbar.scss';
 

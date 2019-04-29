@@ -30,14 +30,14 @@
 }
 .button i  {
     margin-right: 10px;
-    color: #78909C;
+    color: rgb(127,140,141) ;
 }
 .button span{
     margin-left: 15px;
 }
 
 .small-menu {
-    background: #EEEEEE;  
+    background: rgb(127,140,141);  
     transition: max-height 0.3s;
     max-height: 0;
     overflow: hidden;
@@ -46,7 +46,7 @@
 .small-menu a{
     display: block;
     padding: 10px 70px;
-    color: #9E9E9E;
+    color: #ffffff;
     position: relative;
     margin-bottom: 2px;
     transition: 0.3s;
@@ -55,7 +55,7 @@
     content: "";
     width: 7px;
     height: 100%;
-    background: #9E9E9E;
+    background: #ffffff;
     position: absolute;
     left: 0;
     top: 0;

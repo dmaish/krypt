@@ -20,7 +20,7 @@
     "serve": "^11.0.0"
   },
   "scripts": {
-    "dev": "react-app-rewired start",
+    "start:dev": "react-app-rewired start",
     "start": "serve -s build",
     "build": "react-app-rewired build",
     "test": "react-app-rewired test",

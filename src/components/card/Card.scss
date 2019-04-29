@@ -1,13 +1,17 @@
+
+@mixin visibility-mixin($visible){
+    display: $visible;
+}
 .card:hover {
     background-color: #ffffff;
     box-shadow: 0 19px 38px rgba(0,0,0,0.5);
 }
+
 .card {
     position: relative;
     width: 280px;
     height: 320px;
-    box-shadow: 0 12px 20px rgba(0,0,0,0.5);
-
+    box-shadow: 0 12px 30px rgba(0,0,0,0.4);
     .card-title {
         position: relative;
         top: 15px;
@@ -58,8 +62,8 @@
     }
     .circulating {
         position: relative;
-        top: -10px;
-        left: 130px;
+        top: 8px;
+        left: 20px;
 
         .circulating-title, .actual-circulating {
             display: block;
@@ -68,25 +72,33 @@
 
     .drop-rise {
         position: relative;
-        top: 18px;
-        left: 20px;
+        top: -17px;
+        left: 130px;
 
-        .hr-drop-rise-title, .hrs-drop-rise-title {
+        .hr-drop-rise-title {
             display: block;
             margin-top: 7px;
+        }
+        .changepercent {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 100;
+            font-size: 12px;
+            margin-left: 5px;
         }
 
     }
     .actual-circulating, 
     .actual-market-cap,
     .actual-price,
-    .actual-volume {
+    .actual-volume,
+    .actual-drop-rise {
         font-family: 'Montserrat', sans-serif;
         color: #455A64;
-
+        font-weight: 700;
+        font-size: 14px;
     }
     .actual-price{
-        color: #9C27B0;
+        color: #1DB700;
         
     }
 
@@ -98,11 +110,22 @@
 
     .card-graph {
         position: relative;
-        display: inline-block;
-        top: -53px;
-        left: 90px;
-        width: 170px;
+        display: block;
+        top: 25px;
+        left: 20px;
+        width: 160px;
         height: 70px;
         background: #03A9F4;
+    }
+
+
+    .graph-modal-container {
+        display: none;
+        position: relative;
+        top: 72px;
+        left: 40px;
+    }
+    .card-graph:hover  .graph-modal-container {
+        @include visibility-mixin(block);
     }
 }
