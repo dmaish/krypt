@@ -1,0 +1,40 @@
+
+.btn {
+    position: relative;
+    width: 75px;
+    height: 33px;
+    padding: 11px 5px 0px 5px;
+    background: #ffffff;
+    border-radius: 30px;
+    font-size: 12px;
+    color: black;
+    top: -25px;
+    left: 81.5%;
+    transform: translate(-50%, -28%);
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+    font-weight: 400;
+
+    i {
+        font-size: 15px;
+        margin-top: 2px;
+        margin-left: 2px;
+        margin-right: 7px;
+        padding-left: 5px;
+    }
+
+    .btn-title{
+        display: inline-block;
+        font-size: 10px;
+    }
+}
+.btn:hover {
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.9);
+    }
+    .btn:active {
+        box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.5);
+        }
