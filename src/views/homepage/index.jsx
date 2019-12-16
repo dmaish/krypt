@@ -1,6 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import { connect } from 'react-redux';
 import { Navbar } from './../../components/NavBar';
+
 import { SideBarAndContentAreaContainer } from './../../components/contentArea';
 import { 
     retractSlider,
